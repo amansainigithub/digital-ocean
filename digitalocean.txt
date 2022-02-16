@@ -1,0 +1,47 @@
+command:-
+ls = list the directory
+pwd= present working directory
+cd / = start the computer root
+cd home=enter the home directory
+cd ../ =back one step
+****************************intial server setup*********************************
+adduser username = add the user
+usermod -aG sudo username =  create a sudo user like root
+ufw app list =available application
+ufw status = show status active or not
+ufw allow OpenSSH 
+ufw enable
+******************************* sudo user setup**********************
+sudo ufw allow portno
+restart tomcat =sudo systemctl restart tomcat
+start tomcat =sudo systemctl start tomcat
+status of tomcat =sudo systemctl status tomcat
+cd /opt/tomcat/bin
+
+***********************add permissions of folder***************************
+(+)=means grant a permission
+(-)=means ungrant a permission
+chmod -R g+w /opt/tomcat/webapps
+************************deploy a jar file in server**************************
+java -jar IndianArmy.jar
+************************mysql installation*******************************
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+sudo mysql =  enter the  mysql 
+for create user in mysql =  CREATE USER 'ishu'@'localhost' IDENTIFIED BY 'Ishu@1234';
+grant permisison of user =  GRANT ALL PRIVILEGES ON *.* TO 'ishu'@'localhost';
+sudo mysql -u amit -p= for login  mysql
+flush privileges;
+select user from mysql.user;
+sudo ufw allow from 172.19.192.1 to any port 3306
+DROP USER 'amannew'@'localhost';
+SHOW GRANTS FOR 'jeffrey'@'localhost';
+sudo systemctl restart mysql
+sudo systemctl status mysql
+
+
+
+172.19.192.1
+10.122.0.2
+
+
+

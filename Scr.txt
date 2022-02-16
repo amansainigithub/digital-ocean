@@ -1,0 +1,83 @@
+
+
+/etc/systemd/system
+vim demo123.service  
+
+[Unit]
+Description=A Spring Boot Application for demo123
+After=syslog.target
+
+[Service]
+User=root
+ExecStart=/root/testing/demo123.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+
+:wq! then enter
+
+cd /etc/systemd/system
+systemctl start demo123
+systemctl restart demo123
+systemctl stop demo123
+systemctl enable demo123
+systemctl status demo123
+
+chmod 777 
+
+
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+			<executable>true</executable>
+			</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+==============================================================================================
+==============================================================================================
+
+sudo apt remove nginx
+sudo apt install nginx
+sudo apt reinstall nginx
+
+systemctl start nginx
+systemctl restart nginx
+systemctl stop nginx
+systemctl enable nginx
+systemctl status nginx
+
+
+/etc/nginx/conf.d/
+			vim codewithdurgesh.com.conf
+server{
+	listen 0.0.0.0:80;
+	root /root/testing/sflux-client;
+	server_name codewithdurgesh.com
+	location/{
+try_files $uri $uri /index.html;
+}
+}
+
+[Duplicate content]
+
+/etc/nginx/conf.d/
+			vim 64.225.3.33.conf
+server{
+	listen 0.0.0.0:80;
+	root /root/testing/sflux-client;
+	server_name 64.225.3.33
+	location/{
+try_files $uri $uri /index.html;
+}
+}
+
+:wq! the enter

@@ -1,0 +1,79 @@
+Host :  ip
+password : amaN@123a
+amaN@123a
+username : root
+port : 22
+
+//Open jar file to run jar in server
+java -jar filename.jar
+
+
+sudo apt update
+sudo apt-cache search tomcat
+sudo apt install tomcat9 tomcat9-admin
+ss -ltn
+sudo systemctl enabled tomcat9
+sudo systemctl stop tomcat9
+sudo systemctl start tomcat9
+sudo systemctl restart tomcat9
+sudo systemctl disabled tomcat9
+sudo systemctl status tomcat9
+
+sudo ufw allow any to any port 8080 proto tcp
+
+
+=============
+chmod -R 777 /www/store
+chmod -R 777 ./
+
+sudo apt update
+sudo apt install openjdk-8-jdk openjdk-8-jre
+
+
+sudo apt install mysql-server
+
+CREATE USER 'demo'@'localhost' IDENTIFIED BY 'demo123';
+GRANT ALL PRIVILEGES ON * . * TO 'demo'@'localhost';
+FLUSH PRIVILEGES;
+
+DROP USER 'username'@'localhost';
+DROP USER 'demo'@'%';
+
+[RIGHT WAY]
+CREATE USER 'demo'@'%' IDENTIFIED BY 'demo123';
+grant all privileges on *.* to'demo'@'%' with grant option;
+FLUSH PRIVILEGES;
+
+SHOW GRANTS FOR 'username'@'localhost';
+DROP USER 'demo'@'localhost';
+quit
+sudo mysql –u demo –p
+
+sudo ufw allow from  159.203.94.106 to any port 3306
+
+sudo ufw allow 3306
+
+
+
+
+=========================================
+sudo apt update
+sudo apt install nginx
+
+
+
+
+
+
+
+
+
+UNISTALL MYSQL SERVER COMPLETE
+
+sudo systemctl stop mysql
+sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+
+
+
+CREATE TABLE Person(id int,LastName varchar(255));
+
